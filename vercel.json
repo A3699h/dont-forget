@@ -1,13 +1,10 @@
 {
     "version": 2,
-    "buildCommand": "npm install && npm run build",
-    "outputDirectory": "dist",
-    "installCommand": "npm install",
     "framework": "vite",
+    "buildCommand": "npx vite build",
+    "installCommand": "npm ci",
+    "outputDirectory": "dist",
     "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
+      { "source": "/(.*)", "destination": "/index.html" }
     ]
 }

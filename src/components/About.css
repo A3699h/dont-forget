@@ -1,0 +1,264 @@
+/* About Section Styles */
+.about-section {
+  padding: 100px 40px;
+  background: #fef7f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Content Section */
+.about-content {
+  padding-right: 40px;
+}
+
+.about-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #5C3A21;
+  line-height: 1.1;
+  margin: 0 0 32px 0;
+  letter-spacing: -1px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.about-description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333333;
+  margin: 0 0 40px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.about-cta-button {
+  padding: 18px 36px;
+  background: linear-gradient(135deg, #d2691e 0%, #cd853f 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(210, 105, 30, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.about-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(210, 105, 30, 0.4);
+}
+
+/* Images Section */
+.about-images {
+  position: relative;
+  height: 400px;
+}
+
+.image-container {
+  position: absolute;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.image-1 {
+  width: 280px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.image-2 {
+  width: 240px;
+  height: 180px;
+  top: 120px;
+  right: 0;
+  z-index: 1;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffb366 0%, #ff8c42 100%);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 100%);
+  border-radius: 16px;
+}
+
+.image-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  z-index: 1;
+  position: relative;
+}
+
+.image-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Decorative Elements */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #ffcc99 0%, #ffb366 100%);
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.about-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #ff8c42 0%, #d2691e 100%);
+  border-radius: 50%;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-container {
+    gap: 60px;
+  }
+  
+  .about-title {
+    font-size: 42px;
+  }
+  
+  .about-images {
+    height: 350px;
+  }
+  
+  .image-1 {
+    width: 250px;
+    height: 180px;
+  }
+  
+  .image-2 {
+    width: 220px;
+    height: 160px;
+    top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 20px;
+  }
+  
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .about-content {
+    padding-right: 0;
+  }
+  
+  .about-title {
+    font-size: 36px;
+  }
+  
+  .about-description {
+    font-size: 16px;
+  }
+  
+  .about-images {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 200px;
+    height: 150px;
+    margin-right: 20px;
+  }
+  
+  .image-2 {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 180px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 28px;
+  }
+  
+  .about-description {
+    font-size: 15px;
+  }
+  
+  .about-cta-button {
+    padding: 16px 32px;
+    font-size: 15px;
+  }
+  
+  .about-images {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+  
+  .image-1,
+  .image-2 {
+    position: relative;
+    margin: 0;
+  }
+}
+

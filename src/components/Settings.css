@@ -1,0 +1,307 @@
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background: #FAFAFA;
+}
+
+.settings-side {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  height: fit-content;
+}
+
+.settings-side-header {
+  font-weight: 800;
+  padding: 16px 16px 8px 16px;
+  color: #000000;
+  border-bottom: 2px solid #A9B8FF;
+}
+
+.settings-nav { list-style:none; margin:0; padding:8px; }
+.settings-link {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #111827;
+}
+.settings-link:hover { background:#EDEFFF; }
+.settings-link.active { background:#FF7043; color:#fff; font-weight:700; }
+
+.settings-content { background:#F7F8FF; border-radius:12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border:1px solid #e5e7eb; }
+.settings-header { padding: 20px 20px 0 20px; border-bottom: 2px solid #A9B8FF; }
+.section-title { display:flex; align-items:center; gap:10px; }
+.title-icon { font-size:20px; }
+.section-desc { color:#4b5563; margin: 6px 0 16px; padding: 0 2px; }
+
+.card-grid { padding: 16px; display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.setting-card { padding: 16px; border:1px solid #e5e7eb; border-radius:12px; background:#FFFFFF; }
+.card-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.card-title { font-weight:700; color:#111827; }
+.card-desc { color:#6b7280; margin: 6px 0 12px; }
+.card-actions { display:flex; gap: 10px; }
+.status-badge { padding: 4px 10px; border-radius:999px; background:#EDEFFF; color:#111827; font-size:12px; }
+
+/* Account Profile Section */
+.account-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.profile-full-name {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 2px;
+}
+
+.profile-email {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.profile-role {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 2px;
+  font-style: italic;
+}
+
+.profile-business {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid #e5e7eb;
+}
+.status-badge.connected { background:#10b981; color:#fff; }
+
+.toggle-list { display:flex; flex-direction:column; gap: 10px; }
+.toggle-item { color:#374151; }
+
+.report-buttons { display:flex; flex-wrap:wrap; gap:10px; }
+
+.form-row { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.form-field { display:flex; flex-direction:column; gap:8px; }
+.form-field input[type="number"], .form-field input[type="color"], .form-field input[type="file"] { padding: 10px; border:1px solid #e5e7eb; border-radius:8px; }
+.hint { color:#6b7280; font-size:12px; }
+
+.guest-grid { display:flex; flex-direction:column; gap:12px; }
+.guest-info { background:#f9fafb; border:1px solid #e5e7eb; border-radius:8px; padding:12px; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.account-actions { display:flex; flex-wrap:wrap; gap:10px; }
+
+.primary-btn { background: #FF7043; color:#fff; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; }
+.settings-content .primary-btn:hover { background:#e55a2b; box-shadow: 0 4px 12px rgba(229, 90, 43, 0.35); transform: translateY(-1px); }
+.secondary-btn { background: #A9B8FF; color: #000; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; }
+.danger-btn { background: #FF7043; color:#fff; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; }
+
+/* Vertical stack is default; no extra breakpoint needed */
+
+
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  .settings-side-header {
+    font-size: 16px;
+    padding: 12px 12px 6px 12px;
+  }
+  
+  .settings-nav {
+    padding: 6px;
+  }
+  
+  .settings-link {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  
+  .settings-header {
+    padding: 16px 16px 0 16px;
+  }
+  
+  .section-title {
+    gap: 8px;
+  }
+  
+  .title-icon {
+    font-size: 18px;
+  }
+  
+  .section-title h2 {
+    font-size: 18px;
+  }
+  
+  .section-desc {
+    font-size: 13px;
+    margin: 4px 0 12px;
+  }
+  
+  .card-grid {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .setting-card {
+    padding: 12px;
+  }
+  
+  .card-title {
+    font-size: 15px;
+  }
+  
+  .card-desc {
+    font-size: 13px;
+    margin: 4px 0 10px;
+  }
+  
+  .status-badge {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+  
+  .primary-btn,
+  .secondary-btn,
+  .danger-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  
+  .form-row {
+    gap: 10px;
+  }
+  
+  .form-field input[type="number"],
+  .form-field input[type="color"],
+  .form-field input[type="file"] {
+    padding: 8px;
+    font-size: 13px;
+  }
+  
+  .hint {
+    font-size: 11px;
+  }
+  
+  .guest-info {
+    padding: 10px;
+    font-size: 13px;
+  }
+  
+  .report-buttons,
+  .account-actions {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-page {
+    padding: 12px;
+    gap: 10px;
+  }
+  
+  .settings-side-header {
+    font-size: 15px;
+    padding: 10px 10px 5px 10px;
+  }
+  
+  .settings-link {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+  
+  .settings-header {
+    padding: 12px 12px 0 12px;
+  }
+  
+  .section-title h2 {
+    font-size: 16px;
+  }
+  
+  .title-icon {
+    font-size: 16px;
+  }
+  
+  .section-desc {
+    font-size: 12px;
+  }
+  
+  .card-grid {
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  .setting-card {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 14px;
+  }
+  
+  .card-desc {
+    font-size: 12px;
+    margin: 3px 0 8px;
+  }
+  
+  .primary-btn,
+  .secondary-btn,
+  .danger-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  
+  .form-field input[type="number"],
+  .form-field input[type="color"],
+  .form-field input[type="file"] {
+    padding: 6px;
+    font-size: 12px;
+  }
+  
+  .guest-info {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

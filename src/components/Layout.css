@@ -1,0 +1,188 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding-left: 240px; /* reserve space for expanded sidebar */
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0; /* handled by .layout padding */
+  width: 100%;
+  min-width: 0; /* allow children to shrink instead of overflow */
+}
+
+.layout-header {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (max-width: 500px) {
+  .layout-header {
+    top: 4rem;
+    right: 0.75rem;
+  }
+}
+
+.sidebar-closed .main-content {
+  margin-left: 0;
+}
+
+.layout.sidebar-closed {
+  padding-left: 48px; /* reserve space for collapsed sidebar */
+}
+
+
+/* .mobile-header {
+  display: none;
+  background: white;
+  padding: 16px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  justify-content: center;
+} */
+
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-toggle:hover {
+  background: #f5f5f5;
+}
+
+.mobile-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.placeholder-content {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  background: white;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-topbar { display: none; background-color: var(--coral-orange); z-index: 999;}
+
+.mobile-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--coral-orange);
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-toggle:hover {
+  background: #e67e22;
+  transform: scale(1.05);
+}
+
+.mobile-menu-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+  /* Top bar that holds the burger and spans full width */
+  .mobile-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+  }
+  .mobile-menu-toggle { display: inline-flex; }
+  
+  .mobile-overlay {
+    display: block;
+  }
+  
+  /* Hide sidebar completely and make content full width */
+  .layout { 
+    padding-left: 0; /* No padding for sidebar */
+  }
+  .layout.sidebar-closed { 
+    padding-left: 0; /* No padding when closed */
+  }
+  .main-content { 
+    margin-left: 0; 
+    width: 100%; 
+    padding-top: 56px; /* Push content below top bar */
+  }
+  
+  /* When sidebar is open, it takes full width and overlays content */
+  .sidebar.open {
+    width: 100%;
+    z-index: 1001; /* Ensure it's above other content */
+  }
+}
+
+@media (max-width: 640px) and (min-width: 501px) {
+  .mobile-header {
+    display: flex;
+  }
+  
+  .mobile-overlay {
+    display: block;
+  }
+  
+  /* Show collapsed sidebar by default in mobile, full width when open */
+  .layout { padding-left: 48px; } /* Reserve space for collapsed sidebar */
+  .layout.sidebar-closed { padding-left: 48px; } /* Keep same padding when closed */
+  .main-content { margin-left: 0; width: 100%; }
+  
+  /* When sidebar is open in mobile, it takes full width and overlays content */
+  .sidebar.open {
+    width: 100%;
+    z-index: 1001; /* Ensure it's above other content */
+  }
+}
+

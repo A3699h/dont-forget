@@ -1,0 +1,477 @@
+/* ========================================
+   Communication Templates Page
+   Modern, Clean, & Colorful Design
+   ======================================== */
+
+.meeting-templates-page {
+  padding: 48px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #FAFAFA;
+  min-height: 100vh;
+}
+
+/* ========================================
+   Header Section
+   ======================================== */
+
+.templates-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 32px 24px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(169, 184, 255, 0.15);
+}
+
+.templates-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.templates-header .header-intro {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+.templates-header .header-description {
+  font-size: 18px;
+  color: #333333;
+  margin: 0 0 20px 0;
+  line-height: 1.7;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.templates-header .header-tagline {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FF7043;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ========================================
+   Copy Success Message
+   ======================================== */
+
+.copy-success {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #FFFFFF;
+  padding: 16px 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   Accordion Section
+   ======================================== */
+
+.templates-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion-item {
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 6px 20px rgba(169, 184, 255, 0.25);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 24px 28px;
+  background: #A9B8FF;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.accordion-header:hover {
+  background: #9AA8F5;
+  transform: translateY(-1px);
+}
+
+.accordion-header:active {
+  transform: translateY(0);
+}
+
+.accordion-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  text-align: left;
+}
+
+.accordion-icon {
+  font-size: 18px;
+  color: #000000;
+  transition: transform 0.3s ease;
+}
+
+/* ========================================
+   Accordion Content
+   ======================================== */
+
+.accordion-content {
+  padding: 24px;
+  animation: expandDown 0.3s ease;
+}
+
+@keyframes expandDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 10000px;
+  }
+}
+
+/* ========================================
+   Templates Grid
+   ======================================== */
+
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* ========================================
+   Template Cards
+   ======================================== */
+
+.template-card {
+  background: #FFFFFF;
+  border: 2px solid #A9B8FF;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(169, 184, 255, 0.15);
+  transition: all 0.3s ease;
+  overflow: visible;
+  position: relative;
+}
+
+.template-card:hover {
+  border-color: #FF7043;
+  box-shadow: 0 8px 24px rgba(255, 112, 67, 0.25);
+  transform: translateY(-4px);
+}
+
+.template-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #A9B8FF;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+  min-height: 50px;
+  width: 100%;
+}
+
+.template-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+}
+
+/* ========================================
+   Copy Button
+   ======================================== */
+
+.copy-btn {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  background: #FF7043 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(255, 112, 67, 0.3);
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 2;
+  min-height: 40px;
+  min-width: 80px;
+}
+
+.copy-btn:hover {
+  background: #E85D32 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 112, 67, 0.45);
+}
+
+.copy-btn:active {
+  transform: translateY(0);
+}
+
+.copy-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 112, 67, 0.25);
+}
+
+.copy-icon {
+  font-size: 14px;
+}
+
+/* ========================================
+   Template Content
+   ======================================== */
+
+.template-content {
+  line-height: 1.7;
+}
+
+.template-content p {
+  font-size: 15px;
+  color: #333333;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* ========================================
+   Responsive Design - Tablet
+   ======================================== */
+
+@media (max-width: 768px) {
+  .meeting-templates-page {
+    padding: 32px 16px;
+  }
+
+  .templates-header {
+    padding: 24px 20px;
+    margin-bottom: 32px;
+  }
+
+  .templates-header h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .templates-header .header-intro {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .templates-header .header-description {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .templates-header .header-tagline {
+    font-size: 18px;
+  }
+
+  .accordion-header {
+    padding: 20px 24px;
+  }
+
+  .accordion-title {
+    font-size: 18px;
+  }
+
+  .accordion-content {
+    padding: 20px;
+  }
+
+  .templates-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .template-card {
+    padding: 20px;
+  }
+
+  .template-header h3 {
+    font-size: 16px;
+  }
+
+  .copy-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .template-content p {
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   Responsive Design - Mobile
+   ======================================== */
+
+@media (max-width: 480px) {
+  .meeting-templates-page {
+    padding: 24px 12px;
+  }
+
+  .templates-header {
+    padding: 20px 16px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+  }
+
+  .templates-header h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .templates-header .header-intro {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .templates-header .header-description {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .templates-header .header-tagline {
+    font-size: 16px;
+  }
+
+  .copy-success {
+    padding: 14px 18px;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .templates-accordion {
+    gap: 16px;
+  }
+
+  .accordion-item {
+    border-radius: 12px;
+  }
+
+  .accordion-header {
+    padding: 16px 20px;
+    border-radius: 12px;
+  }
+
+  .accordion-title {
+    font-size: 16px;
+  }
+
+  .accordion-icon {
+    font-size: 16px;
+  }
+
+  .accordion-content {
+    padding: 16px;
+  }
+
+  .templates-grid {
+    gap: 14px;
+  }
+
+  .template-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .template-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+
+  .template-header h3 {
+    font-size: 15px;
+  }
+
+  .copy-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .template-content p {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   Extra Small Screens
+   ======================================== */
+
+@media (max-width: 360px) {
+  .templates-header h1 {
+    font-size: 24px;
+  }
+
+  .templates-header .header-intro {
+    font-size: 16px;
+  }
+
+  .templates-header .header-description {
+    font-size: 14px;
+  }
+
+  .templates-header .header-tagline {
+    font-size: 15px;
+  }
+
+  .accordion-title {
+    font-size: 15px;
+  }
+
+  .template-header h3 {
+    font-size: 14px;
+  }
+
+  .template-content p {
+    font-size: 12px;
+  }
+}

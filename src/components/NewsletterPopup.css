@@ -1,0 +1,266 @@
+/* Newsletter Popup Styles */
+.newsletter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.newsletter-popup {
+  background: var(--soft-white);
+  border-radius: 20px;
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  position: relative;
+  box-shadow: 0 20px 60px var(--shadow-light);
+  animation: slideIn 0.4s ease-out;
+  border: 2px solid var(--lavender-pastel);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--black);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.close-button:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--black);
+}
+
+.popup-content {
+  padding: 40px 30px 30px;
+  text-align: center;
+}
+
+.popup-logo h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--black);
+  margin: 0 0 20px 0;
+  letter-spacing: -1px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.popup-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-icon {
+  display: flex;
+  align-items: center;
+}
+
+.popup-description {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.popup-form {
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  gap: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--shadow-light);
+  background: white;
+  border: 2px solid var(--lavender-pastel);
+}
+
+.email-input {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: white;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.email-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.email-input:focus {
+  background: #f8f9fa;
+}
+
+.subscribe-button {
+  padding: 16px 30px;
+  background: var(--coral-orange);
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  min-width: 120px;
+}
+
+.subscribe-button:hover {
+  background: #e55a2b;
+  transform: translateY(-1px);
+}
+
+.subscribe-button:active {
+  transform: translateY(0);
+}
+
+.success-message {
+  padding: 20px 0;
+}
+
+.success-message h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 15px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.success-icon {
+  display: flex;
+  align-items: center;
+}
+
+.success-message p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .newsletter-popup {
+    width: 92%;
+    margin: 16px;
+    max-width: 420px;
+  }
+  
+  .popup-content {
+    padding: 30px 20px 25px;
+  }
+  
+  .popup-logo h2 {
+    font-size: 28px;
+  }
+  
+  .popup-title {
+    font-size: 20px;
+  }
+  
+  .popup-description {
+    font-size: 15px;
+  }
+  
+  .input-group {
+    flex-direction: column;
+    border-radius: 15px;
+  }
+  
+  .email-input {
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px solid var(--lavender-pastel);
+  }
+  
+  .subscribe-button {
+    border-radius: 0 0 15px 15px;
+    padding: 14px 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-logo h2 {
+    font-size: 24px;
+  }
+  .newsletter-popup {
+    width: 90%;
+    max-width: 360px;
+    margin: 12px;
+  }
+  
+  .popup-title {
+    font-size: 18px;
+  }
+  
+  .popup-description {
+    font-size: 14px;
+  }
+  
+  .email-input {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+  
+  .subscribe-button {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+}
